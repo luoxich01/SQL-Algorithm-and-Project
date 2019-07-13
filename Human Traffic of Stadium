@@ -29,11 +29,14 @@ Note:
 Each day only have one row record, and the dates are increasing with id increasing.
 
 # Write your MySQL query statement below
-SELECT a.id AS id, a.visit_date AS visit_date, a.people AS people
-FROM
-stadium AS a,
-stadium AS b,
-stadium AS c
+# Write your MySQL query statement below
+
+SELECT 
+a.id AS id, a.visit_date AS visit_date, a.people AS people FROM stadium AS a
+UNION ALL
+b.id AS id, b.visit_date AS visit_date, b.people AS people FROM stadium AS b
+UNION ALL
+c.id AS id, c.visit_date AS visit_date, c.people AS people FROM stadium AS c
 WHERE 
 DATEDIFF(a.visit_date,b.visit_date)=1
 AND
@@ -44,3 +47,4 @@ AND
 b.people>=100
 AND
 c.people>=100
+ORDER BY id
