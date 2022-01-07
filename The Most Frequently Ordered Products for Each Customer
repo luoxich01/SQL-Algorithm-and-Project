@@ -122,5 +122,5 @@ Note:
 Window function and group by could be used at the same time. The execution sequence is: group by will be executed before select (window function)
 
 Reference:
-https://leetcode.com/problems/the-most-frequently-ordered-products-for-each-customer/
+https://stackoverflow.com/questions/40594466/can-i-group-by-in-sql-query-with-window-function
 */
